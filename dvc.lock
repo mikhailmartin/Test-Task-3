@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train_lgbm_model:
+    cmd: python -m src.train_lgbm_model data/raw/train.pkl models/lgbm_model.pkl
+    deps:
+    - path: data/raw/train.pkl
+      hash: md5
+      md5: b12373ad5bd07fa3e3a211cc9eb11096
+      size: 165192639
+    - path: src/train_lgbm_model.py
+      hash: md5
+      md5: 51188712f4d90afb5ff0a671c1ff15a9
+      size: 820
+    outs:
+    - path: models/lgbm_model.pkl
+      hash: md5
+      md5: fc478b888100220006db0811953e5dfc
+      size: 311252

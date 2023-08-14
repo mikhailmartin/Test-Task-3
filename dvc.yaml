@@ -1,0 +1,9 @@
+stages:
+
+  train_lgbm_model:
+    cmd: python -m src.train_lgbm_model data/raw/train.pkl models/lgbm_model.pkl
+    deps:
+      - data/raw/train.pkl
+      - src/train_lgbm_model.py
+    outs:
+      - models/lgbm_model.pkl
